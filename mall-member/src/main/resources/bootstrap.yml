@@ -1,0 +1,19 @@
+nacos-addr: 127.0.0.1:8848
+
+server:
+  port: 9040
+
+spring:
+  application:
+    name: mall-member
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${nacos-addr}
+      config:
+        server-addr: ${nacos-addr}
+        namespace: ad68a867-7396-44a1-a6fa-478820eddbc0
+        extension-configs[0]:
+          data-id: mall-member.yml
+          group: dev
+          refresh: true

@@ -1,0 +1,47 @@
+package pers.wossge.mall.common.entity.wms;
+
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.Data;
+
+import java.io.Serializable;
+
+/**
+ * 商品库存
+ * 
+ * @author wossge
+ * @email wossge@hotmail.com
+ * @date 2020-07-20 00:21:53
+ */
+@Data
+@TableName("wms_ware_sku")
+public class WmsWareSkuEntity implements Serializable {
+	private static final long serialVersionUID = 1L;
+
+	/**
+	 * id
+	 */
+	@TableId
+	private Long id;
+	/**
+	 * sku_id
+	 */
+	private Long skuId;
+	/**
+	 * 仓库id
+	 */
+	private Long wareId;
+	/**
+	 * 库存数
+	 */
+	private Integer stock;
+	/**
+	 * sku_name
+	 */
+	private String skuName;
+	/**
+	 * 锁定库存
+	 */
+	private Integer stockLocked;
+
+}

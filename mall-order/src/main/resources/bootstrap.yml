@@ -1,0 +1,19 @@
+nacos-addr: 127.0.0.1:8848
+
+server:
+  port: 9030
+
+spring:
+  application:
+    name: mall-order
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${nacos-addr}
+      config:
+        server-addr: ${nacos-addr}
+        namespace: 9a0466df-805b-4641-a7aa-f00e4f8fad26
+        extension-configs[0]:
+          data-id: mall-order.yml
+          group: dev
+          refresh: true

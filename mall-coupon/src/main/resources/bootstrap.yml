@@ -1,0 +1,19 @@
+nacos-addr: 127.0.0.1:8848
+
+server:
+  port: 9050
+
+spring:
+  application:
+    name: mall-coupon
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${nacos-addr}
+      config:
+        server-addr: ${nacos-addr}
+        namespace: f10aea7a-f26b-40ca-ad90-26d08d06165e
+        extension-configs[0]:
+          data-id: mall-coupon.yml
+          group: dev
+          refresh: true

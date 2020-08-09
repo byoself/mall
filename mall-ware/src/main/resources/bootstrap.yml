@@ -1,0 +1,19 @@
+nacos-addr: 127.0.0.1:8848
+
+server:
+  port: 9010
+
+spring:
+  application:
+    name: mall-ware
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${nacos-addr}
+      config:
+        server-addr: ${nacos-addr}
+        namespace: 2308a6ba-74b0-48a3-87e1-1c1ebbeaf49c
+        extension-configs[0]:
+          data-id: mall-ware.yml
+          group: dev
+          refresh: true
