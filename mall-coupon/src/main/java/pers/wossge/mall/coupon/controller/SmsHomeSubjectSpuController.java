@@ -3,7 +3,7 @@ package pers.wossge.mall.coupon.controller;
 import java.util.Arrays;
 import java.util.Map;
 
-//import org.apache.shiro.authz.annotation.RequiresPermissions;
+////import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -35,7 +35,7 @@ public class SmsHomeSubjectSpuController {
      * 列表
      */
     @RequestMapping("/list")
-    //@RequiresPermissions("coupon:smshomesubjectspu:list")
+    ////@RequiresPermissions("coupon:smshomesubjectspu:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = smsHomeSubjectSpuService.queryPage(params);
 
@@ -47,7 +47,7 @@ public class SmsHomeSubjectSpuController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    //@RequiresPermissions("coupon:smshomesubjectspu:info")
+    ////@RequiresPermissions("coupon:smshomesubjectspu:info")
     public R info(@PathVariable("id") Long id){
 		SmsHomeSubjectSpuEntity smsHomeSubjectSpu = smsHomeSubjectSpuService.getById(id);
 
@@ -58,7 +58,7 @@ public class SmsHomeSubjectSpuController {
      * 保存
      */
     @RequestMapping("/save")
-    //@RequiresPermissions("coupon:smshomesubjectspu:save")
+    ////@RequiresPermissions("coupon:smshomesubjectspu:save")
     public R save(@RequestBody SmsHomeSubjectSpuEntity smsHomeSubjectSpu){
 		smsHomeSubjectSpuService.save(smsHomeSubjectSpu);
 
@@ -69,7 +69,7 @@ public class SmsHomeSubjectSpuController {
      * 修改
      */
     @RequestMapping("/update")
-    //@RequiresPermissions("coupon:smshomesubjectspu:update")
+    ////@RequiresPermissions("coupon:smshomesubjectspu:update")
     public R update(@RequestBody SmsHomeSubjectSpuEntity smsHomeSubjectSpu){
 		smsHomeSubjectSpuService.updateById(smsHomeSubjectSpu);
 
@@ -80,7 +80,7 @@ public class SmsHomeSubjectSpuController {
      * 删除
      */
     @RequestMapping("/delete")
-    //@RequiresPermissions("coupon:smshomesubjectspu:delete")
+    ////@RequiresPermissions("coupon:smshomesubjectspu:delete")
     public R delete(@RequestBody Long[] ids){
 		smsHomeSubjectSpuService.removeByIds(Arrays.asList(ids));
 

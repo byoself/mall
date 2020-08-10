@@ -3,7 +3,7 @@ package pers.wossge.mall.product.controller;
 import java.util.Arrays;
 import java.util.Map;
 
-//import org.apache.shiro.authz.annotation.RequiresPermissions;
+////import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -35,7 +35,7 @@ public class PmsSpuImagesController {
      * 列表
      */
     @RequestMapping("/list")
-    //@RequiresPermissions("product:pmsspuimages:list")
+    ////@RequiresPermissions("product:pmsspuimages:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = pmsSpuImagesService.queryPage(params);
 
@@ -47,7 +47,7 @@ public class PmsSpuImagesController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    //@RequiresPermissions("product:pmsspuimages:info")
+    ////@RequiresPermissions("product:pmsspuimages:info")
     public R info(@PathVariable("id") Long id){
 		PmsSpuImagesEntity pmsSpuImages = pmsSpuImagesService.getById(id);
 
@@ -58,7 +58,7 @@ public class PmsSpuImagesController {
      * 保存
      */
     @RequestMapping("/save")
-    //@RequiresPermissions("product:pmsspuimages:save")
+    ////@RequiresPermissions("product:pmsspuimages:save")
     public R save(@RequestBody PmsSpuImagesEntity pmsSpuImages){
 		pmsSpuImagesService.save(pmsSpuImages);
 
@@ -69,7 +69,7 @@ public class PmsSpuImagesController {
      * 修改
      */
     @RequestMapping("/update")
-    //@RequiresPermissions("product:pmsspuimages:update")
+    ////@RequiresPermissions("product:pmsspuimages:update")
     public R update(@RequestBody PmsSpuImagesEntity pmsSpuImages){
 		pmsSpuImagesService.updateById(pmsSpuImages);
 
@@ -80,7 +80,7 @@ public class PmsSpuImagesController {
      * 删除
      */
     @RequestMapping("/delete")
-    //@RequiresPermissions("product:pmsspuimages:delete")
+    ////@RequiresPermissions("product:pmsspuimages:delete")
     public R delete(@RequestBody Long[] ids){
 		pmsSpuImagesService.removeByIds(Arrays.asList(ids));
 

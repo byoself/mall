@@ -3,7 +3,7 @@ package pers.wossge.mall.member.controller;
 import java.util.Arrays;
 import java.util.Map;
 
-//import org.apache.shiro.authz.annotation.RequiresPermissions;
+////import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -35,7 +35,7 @@ public class UmsMemberLevelController {
      * 列表
      */
     @RequestMapping("/list")
-    //@RequiresPermissions("member:umsmemberlevel:list")
+    ////@RequiresPermissions("member:umsmemberlevel:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = umsMemberLevelService.queryPage(params);
 
@@ -47,7 +47,7 @@ public class UmsMemberLevelController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    //@RequiresPermissions("member:umsmemberlevel:info")
+    ////@RequiresPermissions("member:umsmemberlevel:info")
     public R info(@PathVariable("id") Long id){
 		UmsMemberLevelEntity umsMemberLevel = umsMemberLevelService.getById(id);
 
@@ -58,7 +58,7 @@ public class UmsMemberLevelController {
      * 保存
      */
     @RequestMapping("/save")
-    //@RequiresPermissions("member:umsmemberlevel:save")
+    ////@RequiresPermissions("member:umsmemberlevel:save")
     public R save(@RequestBody UmsMemberLevelEntity umsMemberLevel){
 		umsMemberLevelService.save(umsMemberLevel);
 
@@ -69,7 +69,7 @@ public class UmsMemberLevelController {
      * 修改
      */
     @RequestMapping("/update")
-    //@RequiresPermissions("member:umsmemberlevel:update")
+    ////@RequiresPermissions("member:umsmemberlevel:update")
     public R update(@RequestBody UmsMemberLevelEntity umsMemberLevel){
 		umsMemberLevelService.updateById(umsMemberLevel);
 
@@ -80,7 +80,7 @@ public class UmsMemberLevelController {
      * 删除
      */
     @RequestMapping("/delete")
-    //@RequiresPermissions("member:umsmemberlevel:delete")
+    ////@RequiresPermissions("member:umsmemberlevel:delete")
     public R delete(@RequestBody Long[] ids){
 		umsMemberLevelService.removeByIds(Arrays.asList(ids));
 

@@ -3,7 +3,7 @@ package pers.wossge.mall.product.controller;
 import java.util.Arrays;
 import java.util.Map;
 
-//import org.apache.shiro.authz.annotation.RequiresPermissions;
+////import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -35,7 +35,7 @@ public class PmsSpuInfoController {
      * 列表
      */
     @RequestMapping("/list")
-    //@RequiresPermissions("product:pmsspuinfo:list")
+    ////@RequiresPermissions("product:pmsspuinfo:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = pmsSpuInfoService.queryPage(params);
 
@@ -47,7 +47,7 @@ public class PmsSpuInfoController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    //@RequiresPermissions("product:pmsspuinfo:info")
+    ////@RequiresPermissions("product:pmsspuinfo:info")
     public R info(@PathVariable("id") Long id){
 		PmsSpuInfoEntity pmsSpuInfo = pmsSpuInfoService.getById(id);
 
@@ -58,7 +58,7 @@ public class PmsSpuInfoController {
      * 保存
      */
     @RequestMapping("/save")
-    //@RequiresPermissions("product:pmsspuinfo:save")
+    ////@RequiresPermissions("product:pmsspuinfo:save")
     public R save(@RequestBody PmsSpuInfoEntity pmsSpuInfo){
 		pmsSpuInfoService.save(pmsSpuInfo);
 
@@ -69,7 +69,7 @@ public class PmsSpuInfoController {
      * 修改
      */
     @RequestMapping("/update")
-    //@RequiresPermissions("product:pmsspuinfo:update")
+    ////@RequiresPermissions("product:pmsspuinfo:update")
     public R update(@RequestBody PmsSpuInfoEntity pmsSpuInfo){
 		pmsSpuInfoService.updateById(pmsSpuInfo);
 
@@ -80,7 +80,7 @@ public class PmsSpuInfoController {
      * 删除
      */
     @RequestMapping("/delete")
-    //@RequiresPermissions("product:pmsspuinfo:delete")
+    ////@RequiresPermissions("product:pmsspuinfo:delete")
     public R delete(@RequestBody Long[] ids){
 		pmsSpuInfoService.removeByIds(Arrays.asList(ids));
 

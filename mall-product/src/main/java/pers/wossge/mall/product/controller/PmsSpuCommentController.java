@@ -3,7 +3,7 @@ package pers.wossge.mall.product.controller;
 import java.util.Arrays;
 import java.util.Map;
 
-//import org.apache.shiro.authz.annotation.RequiresPermissions;
+////import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -35,7 +35,7 @@ public class PmsSpuCommentController {
      * 列表
      */
     @RequestMapping("/list")
-    //@RequiresPermissions("product:pmsspucomment:list")
+    ////@RequiresPermissions("product:pmsspucomment:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = pmsSpuCommentService.queryPage(params);
 
@@ -47,7 +47,7 @@ public class PmsSpuCommentController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    //@RequiresPermissions("product:pmsspucomment:info")
+    ////@RequiresPermissions("product:pmsspucomment:info")
     public R info(@PathVariable("id") Long id){
 		PmsSpuCommentEntity pmsSpuComment = pmsSpuCommentService.getById(id);
 
@@ -58,7 +58,7 @@ public class PmsSpuCommentController {
      * 保存
      */
     @RequestMapping("/save")
-    //@RequiresPermissions("product:pmsspucomment:save")
+    ////@RequiresPermissions("product:pmsspucomment:save")
     public R save(@RequestBody PmsSpuCommentEntity pmsSpuComment){
 		pmsSpuCommentService.save(pmsSpuComment);
 
@@ -69,7 +69,7 @@ public class PmsSpuCommentController {
      * 修改
      */
     @RequestMapping("/update")
-    //@RequiresPermissions("product:pmsspucomment:update")
+    ////@RequiresPermissions("product:pmsspucomment:update")
     public R update(@RequestBody PmsSpuCommentEntity pmsSpuComment){
 		pmsSpuCommentService.updateById(pmsSpuComment);
 
@@ -80,7 +80,7 @@ public class PmsSpuCommentController {
      * 删除
      */
     @RequestMapping("/delete")
-    //@RequiresPermissions("product:pmsspucomment:delete")
+    ////@RequiresPermissions("product:pmsspucomment:delete")
     public R delete(@RequestBody Long[] ids){
 		pmsSpuCommentService.removeByIds(Arrays.asList(ids));
 

@@ -3,7 +3,7 @@ package pers.wossge.mall.product.controller;
 import java.util.Arrays;
 import java.util.Map;
 
-//import org.apache.shiro.authz.annotation.RequiresPermissions;
+////import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -35,7 +35,7 @@ public class PmsCategoryBrandRelationController {
      * 列表
      */
     @RequestMapping("/list")
-    //@RequiresPermissions("product:pmscategorybrandrelation:list")
+    ////@RequiresPermissions("product:pmscategorybrandrelation:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = pmsCategoryBrandRelationService.queryPage(params);
 
@@ -47,7 +47,7 @@ public class PmsCategoryBrandRelationController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    //@RequiresPermissions("product:pmscategorybrandrelation:info")
+    ////@RequiresPermissions("product:pmscategorybrandrelation:info")
     public R info(@PathVariable("id") Long id){
 		PmsCategoryBrandRelationEntity pmsCategoryBrandRelation = pmsCategoryBrandRelationService.getById(id);
 
@@ -58,7 +58,7 @@ public class PmsCategoryBrandRelationController {
      * 保存
      */
     @RequestMapping("/save")
-    //@RequiresPermissions("product:pmscategorybrandrelation:save")
+    ////@RequiresPermissions("product:pmscategorybrandrelation:save")
     public R save(@RequestBody PmsCategoryBrandRelationEntity pmsCategoryBrandRelation){
 		pmsCategoryBrandRelationService.save(pmsCategoryBrandRelation);
 
@@ -69,7 +69,7 @@ public class PmsCategoryBrandRelationController {
      * 修改
      */
     @RequestMapping("/update")
-    //@RequiresPermissions("product:pmscategorybrandrelation:update")
+    ////@RequiresPermissions("product:pmscategorybrandrelation:update")
     public R update(@RequestBody PmsCategoryBrandRelationEntity pmsCategoryBrandRelation){
 		pmsCategoryBrandRelationService.updateById(pmsCategoryBrandRelation);
 
@@ -80,7 +80,7 @@ public class PmsCategoryBrandRelationController {
      * 删除
      */
     @RequestMapping("/delete")
-    //@RequiresPermissions("product:pmscategorybrandrelation:delete")
+    ////@RequiresPermissions("product:pmscategorybrandrelation:delete")
     public R delete(@RequestBody Long[] ids){
 		pmsCategoryBrandRelationService.removeByIds(Arrays.asList(ids));
 

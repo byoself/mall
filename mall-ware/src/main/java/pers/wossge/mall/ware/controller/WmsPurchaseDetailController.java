@@ -3,7 +3,7 @@ package pers.wossge.mall.ware.controller;
 import java.util.Arrays;
 import java.util.Map;
 
-//import org.apache.shiro.authz.annotation.RequiresPermissions;
+////import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -35,7 +35,7 @@ public class WmsPurchaseDetailController {
      * 列表
      */
     @RequestMapping("/list")
-    //@RequiresPermissions("ware:wmspurchasedetail:list")
+    ////@RequiresPermissions("ware:wmspurchasedetail:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = wmsPurchaseDetailService.queryPage(params);
 
@@ -47,7 +47,7 @@ public class WmsPurchaseDetailController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    //@RequiresPermissions("ware:wmspurchasedetail:info")
+    ////@RequiresPermissions("ware:wmspurchasedetail:info")
     public R info(@PathVariable("id") Long id){
 		WmsPurchaseDetailEntity wmsPurchaseDetail = wmsPurchaseDetailService.getById(id);
 
@@ -58,7 +58,7 @@ public class WmsPurchaseDetailController {
      * 保存
      */
     @RequestMapping("/save")
-    //@RequiresPermissions("ware:wmspurchasedetail:save")
+    ////@RequiresPermissions("ware:wmspurchasedetail:save")
     public R save(@RequestBody WmsPurchaseDetailEntity wmsPurchaseDetail){
 		wmsPurchaseDetailService.save(wmsPurchaseDetail);
 
@@ -69,7 +69,7 @@ public class WmsPurchaseDetailController {
      * 修改
      */
     @RequestMapping("/update")
-    //@RequiresPermissions("ware:wmspurchasedetail:update")
+    ////@RequiresPermissions("ware:wmspurchasedetail:update")
     public R update(@RequestBody WmsPurchaseDetailEntity wmsPurchaseDetail){
 		wmsPurchaseDetailService.updateById(wmsPurchaseDetail);
 
@@ -80,7 +80,7 @@ public class WmsPurchaseDetailController {
      * 删除
      */
     @RequestMapping("/delete")
-    //@RequiresPermissions("ware:wmspurchasedetail:delete")
+    ////@RequiresPermissions("ware:wmspurchasedetail:delete")
     public R delete(@RequestBody Long[] ids){
 		wmsPurchaseDetailService.removeByIds(Arrays.asList(ids));
 

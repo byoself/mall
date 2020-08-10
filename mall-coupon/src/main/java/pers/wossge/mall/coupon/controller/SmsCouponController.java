@@ -3,7 +3,7 @@ package pers.wossge.mall.coupon.controller;
 import java.util.Arrays;
 import java.util.Map;
 
-//import org.apache.shiro.authz.annotation.RequiresPermissions;
+////import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -35,7 +35,7 @@ public class SmsCouponController {
      * 列表
      */
     @RequestMapping("/list")
-    //@RequiresPermissions("coupon:smscoupon:list")
+    ////@RequiresPermissions("coupon:smscoupon:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = smsCouponService.queryPage(params);
 
@@ -47,7 +47,7 @@ public class SmsCouponController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    //@RequiresPermissions("coupon:smscoupon:info")
+    ////@RequiresPermissions("coupon:smscoupon:info")
     public R info(@PathVariable("id") Long id){
 		SmsCouponEntity smsCoupon = smsCouponService.getById(id);
 
@@ -58,7 +58,7 @@ public class SmsCouponController {
      * 保存
      */
     @RequestMapping("/save")
-    //@RequiresPermissions("coupon:smscoupon:save")
+    ////@RequiresPermissions("coupon:smscoupon:save")
     public R save(@RequestBody SmsCouponEntity smsCoupon){
 		smsCouponService.save(smsCoupon);
 
@@ -69,7 +69,7 @@ public class SmsCouponController {
      * 修改
      */
     @RequestMapping("/update")
-    //@RequiresPermissions("coupon:smscoupon:update")
+    ////@RequiresPermissions("coupon:smscoupon:update")
     public R update(@RequestBody SmsCouponEntity smsCoupon){
 		smsCouponService.updateById(smsCoupon);
 
@@ -80,7 +80,7 @@ public class SmsCouponController {
      * 删除
      */
     @RequestMapping("/delete")
-    //@RequiresPermissions("coupon:smscoupon:delete")
+    ////@RequiresPermissions("coupon:smscoupon:delete")
     public R delete(@RequestBody Long[] ids){
 		smsCouponService.removeByIds(Arrays.asList(ids));
 

@@ -3,7 +3,7 @@ package pers.wossge.mall.member.controller;
 import java.util.Arrays;
 import java.util.Map;
 
-//import org.apache.shiro.authz.annotation.RequiresPermissions;
+////import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -35,7 +35,7 @@ public class UmsGrowthChangeHistoryController {
      * 列表
      */
     @RequestMapping("/list")
-    //@RequiresPermissions("member:umsgrowthchangehistory:list")
+    ////@RequiresPermissions("member:umsgrowthchangehistory:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = umsGrowthChangeHistoryService.queryPage(params);
 
@@ -47,7 +47,7 @@ public class UmsGrowthChangeHistoryController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    //@RequiresPermissions("member:umsgrowthchangehistory:info")
+    ////@RequiresPermissions("member:umsgrowthchangehistory:info")
     public R info(@PathVariable("id") Long id){
 		UmsGrowthChangeHistoryEntity umsGrowthChangeHistory = umsGrowthChangeHistoryService.getById(id);
 
@@ -58,7 +58,7 @@ public class UmsGrowthChangeHistoryController {
      * 保存
      */
     @RequestMapping("/save")
-    //@RequiresPermissions("member:umsgrowthchangehistory:save")
+    ////@RequiresPermissions("member:umsgrowthchangehistory:save")
     public R save(@RequestBody UmsGrowthChangeHistoryEntity umsGrowthChangeHistory){
 		umsGrowthChangeHistoryService.save(umsGrowthChangeHistory);
 
@@ -69,7 +69,7 @@ public class UmsGrowthChangeHistoryController {
      * 修改
      */
     @RequestMapping("/update")
-    //@RequiresPermissions("member:umsgrowthchangehistory:update")
+    ////@RequiresPermissions("member:umsgrowthchangehistory:update")
     public R update(@RequestBody UmsGrowthChangeHistoryEntity umsGrowthChangeHistory){
 		umsGrowthChangeHistoryService.updateById(umsGrowthChangeHistory);
 
@@ -80,7 +80,7 @@ public class UmsGrowthChangeHistoryController {
      * 删除
      */
     @RequestMapping("/delete")
-    //@RequiresPermissions("member:umsgrowthchangehistory:delete")
+    ////@RequiresPermissions("member:umsgrowthchangehistory:delete")
     public R delete(@RequestBody Long[] ids){
 		umsGrowthChangeHistoryService.removeByIds(Arrays.asList(ids));
 

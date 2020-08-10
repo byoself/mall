@@ -3,7 +3,7 @@ package pers.wossge.mall.product.controller;
 import java.util.Arrays;
 import java.util.Map;
 
-//import org.apache.shiro.authz.annotation.RequiresPermissions;
+////import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -35,7 +35,7 @@ public class PmsSkuInfoController {
      * 列表
      */
     @RequestMapping("/list")
-    //@RequiresPermissions("product:pmsskuinfo:list")
+    ////@RequiresPermissions("product:pmsskuinfo:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = pmsSkuInfoService.queryPage(params);
 
@@ -47,7 +47,7 @@ public class PmsSkuInfoController {
      * 信息
      */
     @RequestMapping("/info/{skuId}")
-    //@RequiresPermissions("product:pmsskuinfo:info")
+    ////@RequiresPermissions("product:pmsskuinfo:info")
     public R info(@PathVariable("skuId") Long skuId){
 		PmsSkuInfoEntity pmsSkuInfo = pmsSkuInfoService.getById(skuId);
 
@@ -58,7 +58,7 @@ public class PmsSkuInfoController {
      * 保存
      */
     @RequestMapping("/save")
-    //@RequiresPermissions("product:pmsskuinfo:save")
+    ////@RequiresPermissions("product:pmsskuinfo:save")
     public R save(@RequestBody PmsSkuInfoEntity pmsSkuInfo){
 		pmsSkuInfoService.save(pmsSkuInfo);
 
@@ -69,7 +69,7 @@ public class PmsSkuInfoController {
      * 修改
      */
     @RequestMapping("/update")
-    //@RequiresPermissions("product:pmsskuinfo:update")
+    ////@RequiresPermissions("product:pmsskuinfo:update")
     public R update(@RequestBody PmsSkuInfoEntity pmsSkuInfo){
 		pmsSkuInfoService.updateById(pmsSkuInfo);
 
@@ -80,7 +80,7 @@ public class PmsSkuInfoController {
      * 删除
      */
     @RequestMapping("/delete")
-    //@RequiresPermissions("product:pmsskuinfo:delete")
+    ////@RequiresPermissions("product:pmsskuinfo:delete")
     public R delete(@RequestBody Long[] skuIds){
 		pmsSkuInfoService.removeByIds(Arrays.asList(skuIds));
 

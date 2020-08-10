@@ -10,7 +10,7 @@ import pers.wossge.mall.product.service.PmsAttrGroupService;
 import java.util.Arrays;
 import java.util.Map;
 
-//import org.apache.shiro.authz.annotation.RequiresPermissions;
+////import org.apache.shiro.authz.annotation.RequiresPermissions;
 ;
 
 
@@ -32,7 +32,7 @@ public class PmsAttrGroupController {
      * 列表
      */
     @RequestMapping("/list")
-    //@RequiresPermissions("product:pmsattrgroup:list")
+    ////@RequiresPermissions("product:pmsattrgroup:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = pmsAttrGroupService.queryPage(params);
 
@@ -44,7 +44,7 @@ public class PmsAttrGroupController {
      * 信息
      */
     @RequestMapping("/info/{attrGroupId}")
-    //@RequiresPermissions("product:pmsattrgroup:info")
+    ////@RequiresPermissions("product:pmsattrgroup:info")
     public R info(@PathVariable("attrGroupId") Long attrGroupId){
 		PmsAttrGroupEntity pmsAttrGroup = pmsAttrGroupService.getById(attrGroupId);
 
@@ -55,7 +55,7 @@ public class PmsAttrGroupController {
      * 保存
      */
     @RequestMapping("/save")
-    //@RequiresPermissions("product:pmsattrgroup:save")
+    ////@RequiresPermissions("product:pmsattrgroup:save")
     public R save(@RequestBody PmsAttrGroupEntity pmsAttrGroup){
 		pmsAttrGroupService.save(pmsAttrGroup);
 
@@ -66,7 +66,7 @@ public class PmsAttrGroupController {
      * 修改
      */
     @RequestMapping("/update")
-    //@RequiresPermissions("product:pmsattrgroup:update")
+    ////@RequiresPermissions("product:pmsattrgroup:update")
     public R update(@RequestBody PmsAttrGroupEntity pmsAttrGroup){
 		pmsAttrGroupService.updateById(pmsAttrGroup);
 
@@ -77,7 +77,7 @@ public class PmsAttrGroupController {
      * 删除
      */
     @RequestMapping("/delete")
-    //@RequiresPermissions("product:pmsattrgroup:delete")
+    ////@RequiresPermissions("product:pmsattrgroup:delete")
     public R delete(@RequestBody Long[] attrGroupIds){
 		pmsAttrGroupService.removeByIds(Arrays.asList(attrGroupIds));
 

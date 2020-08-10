@@ -3,7 +3,7 @@ package pers.wossge.mall.ware.controller;
 import java.util.Arrays;
 import java.util.Map;
 
-//import org.apache.shiro.authz.annotation.RequiresPermissions;
+////import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -35,7 +35,7 @@ public class WmsWareOrderTaskDetailController {
      * 列表
      */
     @RequestMapping("/list")
-    //@RequiresPermissions("ware:wmswareordertaskdetail:list")
+    ////@RequiresPermissions("ware:wmswareordertaskdetail:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = wmsWareOrderTaskDetailService.queryPage(params);
 
@@ -47,7 +47,7 @@ public class WmsWareOrderTaskDetailController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    //@RequiresPermissions("ware:wmswareordertaskdetail:info")
+    ////@RequiresPermissions("ware:wmswareordertaskdetail:info")
     public R info(@PathVariable("id") Long id){
 		WmsWareOrderTaskDetailEntity wmsWareOrderTaskDetail = wmsWareOrderTaskDetailService.getById(id);
 
@@ -58,7 +58,7 @@ public class WmsWareOrderTaskDetailController {
      * 保存
      */
     @RequestMapping("/save")
-    //@RequiresPermissions("ware:wmswareordertaskdetail:save")
+    ////@RequiresPermissions("ware:wmswareordertaskdetail:save")
     public R save(@RequestBody WmsWareOrderTaskDetailEntity wmsWareOrderTaskDetail){
 		wmsWareOrderTaskDetailService.save(wmsWareOrderTaskDetail);
 
@@ -69,7 +69,7 @@ public class WmsWareOrderTaskDetailController {
      * 修改
      */
     @RequestMapping("/update")
-    //@RequiresPermissions("ware:wmswareordertaskdetail:update")
+    ////@RequiresPermissions("ware:wmswareordertaskdetail:update")
     public R update(@RequestBody WmsWareOrderTaskDetailEntity wmsWareOrderTaskDetail){
 		wmsWareOrderTaskDetailService.updateById(wmsWareOrderTaskDetail);
 
@@ -80,7 +80,7 @@ public class WmsWareOrderTaskDetailController {
      * 删除
      */
     @RequestMapping("/delete")
-    //@RequiresPermissions("ware:wmswareordertaskdetail:delete")
+    ////@RequiresPermissions("ware:wmswareordertaskdetail:delete")
     public R delete(@RequestBody Long[] ids){
 		wmsWareOrderTaskDetailService.removeByIds(Arrays.asList(ids));
 

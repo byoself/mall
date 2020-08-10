@@ -3,7 +3,7 @@ package pers.wossge.mall.product.controller;
 import java.util.Arrays;
 import java.util.Map;
 
-//import org.apache.shiro.authz.annotation.RequiresPermissions;
+////import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -35,7 +35,7 @@ public class PmsCategoryController {
      * 列表
      */
     @RequestMapping("/list")
-    //@RequiresPermissions("product:pmscategory:list")
+    ////@RequiresPermissions("product:pmscategory:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = pmsCategoryService.queryPage(params);
 
@@ -47,7 +47,7 @@ public class PmsCategoryController {
      * 信息
      */
     @RequestMapping("/info/{catId}")
-    //@RequiresPermissions("product:pmscategory:info")
+    ////@RequiresPermissions("product:pmscategory:info")
     public R info(@PathVariable("catId") Long catId){
 		PmsCategoryEntity pmsCategory = pmsCategoryService.getById(catId);
 
@@ -58,7 +58,7 @@ public class PmsCategoryController {
      * 保存
      */
     @RequestMapping("/save")
-    //@RequiresPermissions("product:pmscategory:save")
+    ////@RequiresPermissions("product:pmscategory:save")
     public R save(@RequestBody PmsCategoryEntity pmsCategory){
 		pmsCategoryService.save(pmsCategory);
 
@@ -69,7 +69,7 @@ public class PmsCategoryController {
      * 修改
      */
     @RequestMapping("/update")
-    //@RequiresPermissions("product:pmscategory:update")
+    ////@RequiresPermissions("product:pmscategory:update")
     public R update(@RequestBody PmsCategoryEntity pmsCategory){
 		pmsCategoryService.updateById(pmsCategory);
 
@@ -80,7 +80,7 @@ public class PmsCategoryController {
      * 删除
      */
     @RequestMapping("/delete")
-    //@RequiresPermissions("product:pmscategory:delete")
+    ////@RequiresPermissions("product:pmscategory:delete")
     public R delete(@RequestBody Long[] catIds){
 		pmsCategoryService.removeByIds(Arrays.asList(catIds));
 

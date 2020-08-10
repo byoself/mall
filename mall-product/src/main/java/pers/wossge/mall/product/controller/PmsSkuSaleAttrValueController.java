@@ -3,7 +3,7 @@ package pers.wossge.mall.product.controller;
 import java.util.Arrays;
 import java.util.Map;
 
-//import org.apache.shiro.authz.annotation.RequiresPermissions;
+////import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -35,7 +35,7 @@ public class PmsSkuSaleAttrValueController {
      * 列表
      */
     @RequestMapping("/list")
-    //@RequiresPermissions("product:pmsskusaleattrvalue:list")
+    ////@RequiresPermissions("product:pmsskusaleattrvalue:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = pmsSkuSaleAttrValueService.queryPage(params);
 
@@ -47,7 +47,7 @@ public class PmsSkuSaleAttrValueController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    //@RequiresPermissions("product:pmsskusaleattrvalue:info")
+    ////@RequiresPermissions("product:pmsskusaleattrvalue:info")
     public R info(@PathVariable("id") Long id){
 		PmsSkuSaleAttrValueEntity pmsSkuSaleAttrValue = pmsSkuSaleAttrValueService.getById(id);
 
@@ -58,7 +58,7 @@ public class PmsSkuSaleAttrValueController {
      * 保存
      */
     @RequestMapping("/save")
-    //@RequiresPermissions("product:pmsskusaleattrvalue:save")
+    ////@RequiresPermissions("product:pmsskusaleattrvalue:save")
     public R save(@RequestBody PmsSkuSaleAttrValueEntity pmsSkuSaleAttrValue){
 		pmsSkuSaleAttrValueService.save(pmsSkuSaleAttrValue);
 
@@ -69,7 +69,7 @@ public class PmsSkuSaleAttrValueController {
      * 修改
      */
     @RequestMapping("/update")
-    //@RequiresPermissions("product:pmsskusaleattrvalue:update")
+    ////@RequiresPermissions("product:pmsskusaleattrvalue:update")
     public R update(@RequestBody PmsSkuSaleAttrValueEntity pmsSkuSaleAttrValue){
 		pmsSkuSaleAttrValueService.updateById(pmsSkuSaleAttrValue);
 
@@ -80,7 +80,7 @@ public class PmsSkuSaleAttrValueController {
      * 删除
      */
     @RequestMapping("/delete")
-    //@RequiresPermissions("product:pmsskusaleattrvalue:delete")
+    ////@RequiresPermissions("product:pmsskusaleattrvalue:delete")
     public R delete(@RequestBody Long[] ids){
 		pmsSkuSaleAttrValueService.removeByIds(Arrays.asList(ids));
 

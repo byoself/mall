@@ -3,7 +3,7 @@ package pers.wossge.mall.ware.controller;
 import java.util.Arrays;
 import java.util.Map;
 
-//import org.apache.shiro.authz.annotation.RequiresPermissions;
+////import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -35,7 +35,7 @@ public class WmsPurchaseController {
      * 列表
      */
     @RequestMapping("/list")
-    //@RequiresPermissions("ware:wmspurchase:list")
+    ////@RequiresPermissions("ware:wmspurchase:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = wmsPurchaseService.queryPage(params);
 
@@ -47,7 +47,7 @@ public class WmsPurchaseController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    //@RequiresPermissions("ware:wmspurchase:info")
+    ////@RequiresPermissions("ware:wmspurchase:info")
     public R info(@PathVariable("id") Long id){
 		WmsPurchaseEntity wmsPurchase = wmsPurchaseService.getById(id);
 
@@ -58,7 +58,7 @@ public class WmsPurchaseController {
      * 保存
      */
     @RequestMapping("/save")
-    //@RequiresPermissions("ware:wmspurchase:save")
+    ////@RequiresPermissions("ware:wmspurchase:save")
     public R save(@RequestBody WmsPurchaseEntity wmsPurchase){
 		wmsPurchaseService.save(wmsPurchase);
 
@@ -69,7 +69,7 @@ public class WmsPurchaseController {
      * 修改
      */
     @RequestMapping("/update")
-    //@RequiresPermissions("ware:wmspurchase:update")
+    ////@RequiresPermissions("ware:wmspurchase:update")
     public R update(@RequestBody WmsPurchaseEntity wmsPurchase){
 		wmsPurchaseService.updateById(wmsPurchase);
 
@@ -80,7 +80,7 @@ public class WmsPurchaseController {
      * 删除
      */
     @RequestMapping("/delete")
-    //@RequiresPermissions("ware:wmspurchase:delete")
+    ////@RequiresPermissions("ware:wmspurchase:delete")
     public R delete(@RequestBody Long[] ids){
 		wmsPurchaseService.removeByIds(Arrays.asList(ids));
 

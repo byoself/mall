@@ -3,7 +3,7 @@ package pers.wossge.mall.member.controller;
 import java.util.Arrays;
 import java.util.Map;
 
-//import org.apache.shiro.authz.annotation.RequiresPermissions;
+////import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -35,7 +35,7 @@ public class UmsMemberCollectSpuController {
      * 列表
      */
     @RequestMapping("/list")
-    //@RequiresPermissions("member:umsmembercollectspu:list")
+    ////@RequiresPermissions("member:umsmembercollectspu:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = umsMemberCollectSpuService.queryPage(params);
 
@@ -47,7 +47,7 @@ public class UmsMemberCollectSpuController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    //@RequiresPermissions("member:umsmembercollectspu:info")
+    ////@RequiresPermissions("member:umsmembercollectspu:info")
     public R info(@PathVariable("id") Long id){
 		UmsMemberCollectSpuEntity umsMemberCollectSpu = umsMemberCollectSpuService.getById(id);
 
@@ -58,7 +58,7 @@ public class UmsMemberCollectSpuController {
      * 保存
      */
     @RequestMapping("/save")
-    //@RequiresPermissions("member:umsmembercollectspu:save")
+    ////@RequiresPermissions("member:umsmembercollectspu:save")
     public R save(@RequestBody UmsMemberCollectSpuEntity umsMemberCollectSpu){
 		umsMemberCollectSpuService.save(umsMemberCollectSpu);
 
@@ -69,7 +69,7 @@ public class UmsMemberCollectSpuController {
      * 修改
      */
     @RequestMapping("/update")
-    //@RequiresPermissions("member:umsmembercollectspu:update")
+    ////@RequiresPermissions("member:umsmembercollectspu:update")
     public R update(@RequestBody UmsMemberCollectSpuEntity umsMemberCollectSpu){
 		umsMemberCollectSpuService.updateById(umsMemberCollectSpu);
 
@@ -80,7 +80,7 @@ public class UmsMemberCollectSpuController {
      * 删除
      */
     @RequestMapping("/delete")
-    //@RequiresPermissions("member:umsmembercollectspu:delete")
+    ////@RequiresPermissions("member:umsmembercollectspu:delete")
     public R delete(@RequestBody Long[] ids){
 		umsMemberCollectSpuService.removeByIds(Arrays.asList(ids));
 

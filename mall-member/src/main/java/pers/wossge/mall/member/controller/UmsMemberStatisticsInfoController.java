@@ -3,7 +3,7 @@ package pers.wossge.mall.member.controller;
 import java.util.Arrays;
 import java.util.Map;
 
-//import org.apache.shiro.authz.annotation.RequiresPermissions;
+////import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -35,7 +35,7 @@ public class UmsMemberStatisticsInfoController {
      * 列表
      */
     @RequestMapping("/list")
-    //@RequiresPermissions("member:umsmemberstatisticsinfo:list")
+    ////@RequiresPermissions("member:umsmemberstatisticsinfo:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = umsMemberStatisticsInfoService.queryPage(params);
 
@@ -47,7 +47,7 @@ public class UmsMemberStatisticsInfoController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    //@RequiresPermissions("member:umsmemberstatisticsinfo:info")
+    ////@RequiresPermissions("member:umsmemberstatisticsinfo:info")
     public R info(@PathVariable("id") Long id){
 		UmsMemberStatisticsInfoEntity umsMemberStatisticsInfo = umsMemberStatisticsInfoService.getById(id);
 
@@ -58,7 +58,7 @@ public class UmsMemberStatisticsInfoController {
      * 保存
      */
     @RequestMapping("/save")
-    //@RequiresPermissions("member:umsmemberstatisticsinfo:save")
+    ////@RequiresPermissions("member:umsmemberstatisticsinfo:save")
     public R save(@RequestBody UmsMemberStatisticsInfoEntity umsMemberStatisticsInfo){
 		umsMemberStatisticsInfoService.save(umsMemberStatisticsInfo);
 
@@ -69,7 +69,7 @@ public class UmsMemberStatisticsInfoController {
      * 修改
      */
     @RequestMapping("/update")
-    //@RequiresPermissions("member:umsmemberstatisticsinfo:update")
+    ////@RequiresPermissions("member:umsmemberstatisticsinfo:update")
     public R update(@RequestBody UmsMemberStatisticsInfoEntity umsMemberStatisticsInfo){
 		umsMemberStatisticsInfoService.updateById(umsMemberStatisticsInfo);
 
@@ -80,7 +80,7 @@ public class UmsMemberStatisticsInfoController {
      * 删除
      */
     @RequestMapping("/delete")
-    //@RequiresPermissions("member:umsmemberstatisticsinfo:delete")
+    ////@RequiresPermissions("member:umsmemberstatisticsinfo:delete")
     public R delete(@RequestBody Long[] ids){
 		umsMemberStatisticsInfoService.removeByIds(Arrays.asList(ids));
 

@@ -3,7 +3,7 @@ package pers.wossge.mall.coupon.controller;
 import java.util.Arrays;
 import java.util.Map;
 
-//import org.apache.shiro.authz.annotation.RequiresPermissions;
+////import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -35,7 +35,7 @@ public class SmsSpuBoundsController {
      * 列表
      */
     @RequestMapping("/list")
-    //@RequiresPermissions("coupon:smsspubounds:list")
+    ////@RequiresPermissions("coupon:smsspubounds:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = smsSpuBoundsService.queryPage(params);
 
@@ -47,7 +47,7 @@ public class SmsSpuBoundsController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    //@RequiresPermissions("coupon:smsspubounds:info")
+    ////@RequiresPermissions("coupon:smsspubounds:info")
     public R info(@PathVariable("id") Long id){
 		SmsSpuBoundsEntity smsSpuBounds = smsSpuBoundsService.getById(id);
 
@@ -58,7 +58,7 @@ public class SmsSpuBoundsController {
      * 保存
      */
     @RequestMapping("/save")
-    //@RequiresPermissions("coupon:smsspubounds:save")
+    ////@RequiresPermissions("coupon:smsspubounds:save")
     public R save(@RequestBody SmsSpuBoundsEntity smsSpuBounds){
 		smsSpuBoundsService.save(smsSpuBounds);
 
@@ -69,7 +69,7 @@ public class SmsSpuBoundsController {
      * 修改
      */
     @RequestMapping("/update")
-    //@RequiresPermissions("coupon:smsspubounds:update")
+    ////@RequiresPermissions("coupon:smsspubounds:update")
     public R update(@RequestBody SmsSpuBoundsEntity smsSpuBounds){
 		smsSpuBoundsService.updateById(smsSpuBounds);
 
@@ -80,7 +80,7 @@ public class SmsSpuBoundsController {
      * 删除
      */
     @RequestMapping("/delete")
-    //@RequiresPermissions("coupon:smsspubounds:delete")
+    ////@RequiresPermissions("coupon:smsspubounds:delete")
     public R delete(@RequestBody Long[] ids){
 		smsSpuBoundsService.removeByIds(Arrays.asList(ids));
 

@@ -3,7 +3,7 @@ package pers.wossge.mall.member.controller;
 import java.util.Arrays;
 import java.util.Map;
 
-//import org.apache.shiro.authz.annotation.RequiresPermissions;
+////import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -35,7 +35,7 @@ public class UmsMemberController {
      * 列表
      */
     @RequestMapping("/list")
-    //@RequiresPermissions("member:umsmember:list")
+    ////@RequiresPermissions("member:umsmember:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = umsMemberService.queryPage(params);
 
@@ -47,7 +47,7 @@ public class UmsMemberController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    //@RequiresPermissions("member:umsmember:info")
+    ////@RequiresPermissions("member:umsmember:info")
     public R info(@PathVariable("id") Long id){
 		UmsMemberEntity umsMember = umsMemberService.getById(id);
 
@@ -58,7 +58,7 @@ public class UmsMemberController {
      * 保存
      */
     @RequestMapping("/save")
-    //@RequiresPermissions("member:umsmember:save")
+    ////@RequiresPermissions("member:umsmember:save")
     public R save(@RequestBody UmsMemberEntity umsMember){
 		umsMemberService.save(umsMember);
 
@@ -69,7 +69,7 @@ public class UmsMemberController {
      * 修改
      */
     @RequestMapping("/update")
-    //@RequiresPermissions("member:umsmember:update")
+    ////@RequiresPermissions("member:umsmember:update")
     public R update(@RequestBody UmsMemberEntity umsMember){
 		umsMemberService.updateById(umsMember);
 
@@ -80,7 +80,7 @@ public class UmsMemberController {
      * 删除
      */
     @RequestMapping("/delete")
-    //@RequiresPermissions("member:umsmember:delete")
+    ////@RequiresPermissions("member:umsmember:delete")
     public R delete(@RequestBody Long[] ids){
 		umsMemberService.removeByIds(Arrays.asList(ids));
 

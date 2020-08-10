@@ -3,7 +3,7 @@ package pers.wossge.mall.product.controller;
 import java.util.Arrays;
 import java.util.Map;
 
-//import org.apache.shiro.authz.annotation.RequiresPermissions;
+////import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -35,7 +35,7 @@ public class PmsProductAttrValueController {
      * 列表
      */
     @RequestMapping("/list")
-    //@RequiresPermissions("product:pmsproductattrvalue:list")
+    ////@RequiresPermissions("product:pmsproductattrvalue:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = pmsProductAttrValueService.queryPage(params);
 
@@ -47,7 +47,7 @@ public class PmsProductAttrValueController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    //@RequiresPermissions("product:pmsproductattrvalue:info")
+    ////@RequiresPermissions("product:pmsproductattrvalue:info")
     public R info(@PathVariable("id") Long id){
 		PmsProductAttrValueEntity pmsProductAttrValue = pmsProductAttrValueService.getById(id);
 
@@ -58,7 +58,7 @@ public class PmsProductAttrValueController {
      * 保存
      */
     @RequestMapping("/save")
-    //@RequiresPermissions("product:pmsproductattrvalue:save")
+    ////@RequiresPermissions("product:pmsproductattrvalue:save")
     public R save(@RequestBody PmsProductAttrValueEntity pmsProductAttrValue){
 		pmsProductAttrValueService.save(pmsProductAttrValue);
 
@@ -69,7 +69,7 @@ public class PmsProductAttrValueController {
      * 修改
      */
     @RequestMapping("/update")
-    //@RequiresPermissions("product:pmsproductattrvalue:update")
+    ////@RequiresPermissions("product:pmsproductattrvalue:update")
     public R update(@RequestBody PmsProductAttrValueEntity pmsProductAttrValue){
 		pmsProductAttrValueService.updateById(pmsProductAttrValue);
 
@@ -80,7 +80,7 @@ public class PmsProductAttrValueController {
      * 删除
      */
     @RequestMapping("/delete")
-    //@RequiresPermissions("product:pmsproductattrvalue:delete")
+    ////@RequiresPermissions("product:pmsproductattrvalue:delete")
     public R delete(@RequestBody Long[] ids){
 		pmsProductAttrValueService.removeByIds(Arrays.asList(ids));
 

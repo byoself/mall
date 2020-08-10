@@ -3,7 +3,7 @@ package pers.wossge.mall.product.controller;
 import java.util.Arrays;
 import java.util.Map;
 
-//import org.apache.shiro.authz.annotation.RequiresPermissions;
+////import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -35,7 +35,7 @@ public class PmsSpuInfoDescController {
      * 列表
      */
     @RequestMapping("/list")
-    //@RequiresPermissions("product:pmsspuinfodesc:list")
+    ////@RequiresPermissions("product:pmsspuinfodesc:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = pmsSpuInfoDescService.queryPage(params);
 
@@ -47,7 +47,7 @@ public class PmsSpuInfoDescController {
      * 信息
      */
     @RequestMapping("/info/{spuId}")
-    //@RequiresPermissions("product:pmsspuinfodesc:info")
+    ////@RequiresPermissions("product:pmsspuinfodesc:info")
     public R info(@PathVariable("spuId") Long spuId){
 		PmsSpuInfoDescEntity pmsSpuInfoDesc = pmsSpuInfoDescService.getById(spuId);
 
@@ -58,7 +58,7 @@ public class PmsSpuInfoDescController {
      * 保存
      */
     @RequestMapping("/save")
-    //@RequiresPermissions("product:pmsspuinfodesc:save")
+    ////@RequiresPermissions("product:pmsspuinfodesc:save")
     public R save(@RequestBody PmsSpuInfoDescEntity pmsSpuInfoDesc){
 		pmsSpuInfoDescService.save(pmsSpuInfoDesc);
 
@@ -69,7 +69,7 @@ public class PmsSpuInfoDescController {
      * 修改
      */
     @RequestMapping("/update")
-    //@RequiresPermissions("product:pmsspuinfodesc:update")
+    ////@RequiresPermissions("product:pmsspuinfodesc:update")
     public R update(@RequestBody PmsSpuInfoDescEntity pmsSpuInfoDesc){
 		pmsSpuInfoDescService.updateById(pmsSpuInfoDesc);
 
@@ -80,7 +80,7 @@ public class PmsSpuInfoDescController {
      * 删除
      */
     @RequestMapping("/delete")
-    //@RequiresPermissions("product:pmsspuinfodesc:delete")
+    ////@RequiresPermissions("product:pmsspuinfodesc:delete")
     public R delete(@RequestBody Long[] spuIds){
 		pmsSpuInfoDescService.removeByIds(Arrays.asList(spuIds));
 

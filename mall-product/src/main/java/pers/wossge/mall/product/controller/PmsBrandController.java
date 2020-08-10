@@ -3,7 +3,7 @@ package pers.wossge.mall.product.controller;
 import java.util.Arrays;
 import java.util.Map;
 
-//import org.apache.shiro.authz.annotation.RequiresPermissions;
+////import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -35,7 +35,7 @@ public class PmsBrandController {
      * 列表
      */
     @RequestMapping("/list")
-    //@RequiresPermissions("product:pmsbrand:list")
+    ////@RequiresPermissions("product:pmsbrand:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = pmsBrandService.queryPage(params);
 
@@ -47,7 +47,7 @@ public class PmsBrandController {
      * 信息
      */
     @RequestMapping("/info/{brandId}")
-    //@RequiresPermissions("product:pmsbrand:info")
+    ////@RequiresPermissions("product:pmsbrand:info")
     public R info(@PathVariable("brandId") Long brandId){
 		PmsBrandEntity pmsBrand = pmsBrandService.getById(brandId);
 
@@ -58,7 +58,7 @@ public class PmsBrandController {
      * 保存
      */
     @RequestMapping("/save")
-    //@RequiresPermissions("product:pmsbrand:save")
+    ////@RequiresPermissions("product:pmsbrand:save")
     public R save(@RequestBody PmsBrandEntity pmsBrand){
 		pmsBrandService.save(pmsBrand);
 
@@ -69,7 +69,7 @@ public class PmsBrandController {
      * 修改
      */
     @RequestMapping("/update")
-    //@RequiresPermissions("product:pmsbrand:update")
+    ////@RequiresPermissions("product:pmsbrand:update")
     public R update(@RequestBody PmsBrandEntity pmsBrand){
 		pmsBrandService.updateById(pmsBrand);
 
@@ -80,7 +80,7 @@ public class PmsBrandController {
      * 删除
      */
     @RequestMapping("/delete")
-    //@RequiresPermissions("product:pmsbrand:delete")
+    ////@RequiresPermissions("product:pmsbrand:delete")
     public R delete(@RequestBody Long[] brandIds){
 		pmsBrandService.removeByIds(Arrays.asList(brandIds));
 
